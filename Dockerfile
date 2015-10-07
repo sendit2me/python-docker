@@ -13,7 +13,7 @@ ENV PEM_FILE /key.pem
 ENV PASSWORD Dont make this your default
 ENV USE_HTTP 0
 
-RUN sudo apt-get install freetds-dev
+RUN sudo apt-get -y install freetds-dev
 
 RUN pip install --upgrade pip
 RUN pip3 install --upgrade pip
