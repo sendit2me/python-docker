@@ -17,8 +17,8 @@ RUN sudo apt-get install freetds-dev
 
 RUN pip install --upgrade pip
 RUN pip3 install --upgrade pip
-RUN pip install elasticsearch arrow pyyaml py-dateutil bokeh pymssql datetime pivottablejs
-RUN pip3 install elasticsearch arrow pyyaml py-dateutil bokeh pymssql datetime pivottablejs
+RUN pip install elasticsearch arrow pyyaml py-dateutil bokeh pymssql datetime pivottablejs  lightfm
+RUN pip3 install elasticsearch arrow pyyaml py-dateutil bokeh pymssql datetime pivottablejs lightfm
 
 RUN python3 -c "import bokeh.sampledata; bokeh.sampledata.download()"
 
