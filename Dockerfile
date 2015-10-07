@@ -20,9 +20,12 @@ RUN pip3 install --upgrade pip
 RUN pip install elasticsearch arrow pyyaml py-dateutil bokeh pymssql datetime pivottablejs  lightfm
 RUN pip3 install elasticsearch arrow pyyaml py-dateutil bokeh pymssql datetime pivottablejs lightfm
 
-pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U
-pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install -U
+RUN echo 'trying to update all pip '
+pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U
+RUN echo 'trying to update all pip3 '
+pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip3 install -U
 
+RUN echo 'adding notebook file'
 ADD notebook.sh /
 RUN chmod u+x /notebook.sh
 
