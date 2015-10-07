@@ -21,8 +21,10 @@ RUN pip install elasticsearch arrow pyyaml py-dateutil bokeh pymssql datetime pi
 RUN pip3 install elasticsearch arrow pyyaml py-dateutil bokeh pymssql datetime pivottablejs lightfm
 
 RUN echo 'trying to update all pip '
+RUN pip install -U Cython
 RUN pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U
 RUN echo 'trying to update all pip3 '
+RUN pip3 install -U Cython
 RUN pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip3 install -U
 
 RUN echo 'adding notebook file'
