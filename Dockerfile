@@ -17,7 +17,7 @@ RUN sudo apt-get -y install freetds-dev
 
 RUN pip2 install --upgrade pip
 RUN pip3 install --upgrade pip
-RUN pip2 install elasticsearch arrow pyyaml py-dateutil bokeh pymssql datetime pivottablejs  lightfm gensim
+RUN pip2 install elasticsearch arrow pyyaml py-dateutil bokeh pymssql datetime pivottablejs  lightfm gensim pattern
 RUN pip3 install elasticsearch arrow pyyaml py-dateutil bokeh pymssql datetime pivottablejs lightfm gensim
 
 RUN echo 'trying to update all pip '
