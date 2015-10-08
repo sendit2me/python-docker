@@ -33,4 +33,4 @@ RUN echo 'adding notebook file'
 ADD notebook.sh /
 RUN chmod u+x /notebook.sh
 
-
+CMD ["/notebook.sh"]
