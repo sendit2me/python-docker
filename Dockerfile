@@ -15,15 +15,15 @@ ENV USE_HTTP 0
 
 RUN sudo apt-get -y install freetds-dev
 
-RUN pip install --upgrade pip
+RUN pip2 install --upgrade pip
 RUN pip3 install --upgrade pip
-RUN pip install elasticsearch arrow pyyaml py-dateutil bokeh pymssql datetime pivottablejs  lightfm gensim
+RUN pip2 install elasticsearch arrow pyyaml py-dateutil bokeh pymssql datetime pivottablejs  lightfm gensim
 RUN pip3 install elasticsearch arrow pyyaml py-dateutil bokeh pymssql datetime pivottablejs lightfm gensim
 
 RUN echo 'trying to update all pip '
-RUN pip install -U Cython
-RUN pip install jupyter
-RUN pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U
+RUN pip2 install -U Cython
+RUN pip2 install jupyter
+RUN pip2 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip2 install -U
 RUN echo 'trying to update all pip3 '
 RUN pip3 install -U Cython
 RUN pip3 install jupyter
