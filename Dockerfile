@@ -20,6 +20,7 @@ RUN pip3 install --upgrade pip
 RUN pip2 install elasticsearch arrow pyyaml py-dateutil bokeh pymssql datetime pivottablejs  lightfm gensim pattern
 RUN pip3 install elasticsearch arrow pyyaml py-dateutil bokeh pymssql datetime pivottablejs lightfm gensim
 
+RUN echo 'forcing upgrade for pandas'
 RUN echo 'trying to update all pip '
 RUN pip2 install -U Cython
 RUN pip2 install jupyter
